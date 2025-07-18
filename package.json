@@ -1,0 +1,16 @@
+{
+  "name": "pos-hardware-deployment",
+  "version": "1.0.0",
+  "description": "POS Hardware Deployment Services static website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server",
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
