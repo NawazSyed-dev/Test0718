@@ -1042,6 +1042,14 @@
             const regionName = region === 'us' ? 'United States' : 'Canada';
             const categoryData = faqData[region][category];
             
+            // Update header color for Canada
+            const header = document.querySelector('.header');
+            if (region === 'canada') {
+                header.classList.add('canada');
+            } else {
+                header.classList.remove('canada');
+            }
+            
             document.getElementById('page-title').textContent = `${categoryData.title} - ${regionName} - POS Hardware Deployment Services`;
             document.getElementById('faq-title').textContent = categoryData.title;
             document.getElementById('faq-subtitle').textContent = categoryData.subtitle;
