@@ -31,6 +31,10 @@ body {
     overflow: hidden;
 }
 
+.header.canada {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 50%, #a71e2a 100%);
+}
+
 .header::before {
     content: '';
     position: absolute;
