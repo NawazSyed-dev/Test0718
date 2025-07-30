@@ -18,8 +18,12 @@ function navigateToOrdersOperations(region) {
 function goBack() {
     const urlParams = new URLSearchParams(window.location.search);
     const region = urlParams.get('region');
+    const category = urlParams.get('category');
     
-    if (region) {
+    // Handle global contacts
+    if (region === 'global' && category === 'contacts') {
+        window.location.href = 'index.html';
+    } else if (region) {
         window.location.href = `${region}.html`;
     } else {
         window.location.href = 'index.html';
@@ -58,13 +62,23 @@ function initializeFAQPage() {
     
     // Update breadcrumb
     const breadcrumb = document.getElementById('breadcrumb');
-    breadcrumb.innerHTML = `
-        <a href="index.html" class="breadcrumb-link">Home</a>
-        <span class="breadcrumb-separator">></span>
-        <a href="${region}.html" class="breadcrumb-link">${regionName}</a>
-        <span class="breadcrumb-separator">></span>
-        <span class="current">${categoryData.title}</span>
-    `;
+    
+    // Handle global contacts breadcrumb
+    if (region === 'global' && category === 'contacts') {
+        breadcrumb.innerHTML = `
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">Contacts</span>
+        `;
+    } else {
+        breadcrumb.innerHTML = `
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="${region}.html" class="breadcrumb-link">${regionName}</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">${categoryData.title}</span>
+        `;
+    }
     
     // Render FAQ content
     renderFAQContent(categoryData.faqs);
