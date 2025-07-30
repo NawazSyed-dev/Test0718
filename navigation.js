@@ -113,17 +113,19 @@ function renderFAQContent(faqs) {
 }
 
 function toggleFAQ(index) {
-    const question = document.querySelector(`.faq-question:nth-of-type(${(index * 2) + 1})`);
+    const questions = document.querySelectorAll('.faq-question');
+    const question = questions[index];
     const answer = document.getElementById(`faq-answer-${index}`);
     
     // Close all other FAQs
-    document.querySelectorAll('.faq-question').forEach((q, i) => {
+    questions.forEach((q, i) => {
         if (i !== index) {
             q.classList.remove('active');
         }
     });
     
-    document.querySelectorAll('.faq-answer').forEach((a, i) => {
+    const answers = document.querySelectorAll('.faq-answer');
+    answers.forEach((a, i) => {
         if (i !== index) {
             a.classList.remove('active');
         }

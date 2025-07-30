@@ -1495,27 +1495,29 @@
         }
 
         function toggleFAQ(index) {
-            const question = document.querySelector(`.faq-question:nth-of-type(${(index * 2) + 1})`);
+            const questions = document.querySelectorAll('.faq-question');
+            const question = questions[index];
             const answer = document.getElementById(`faq-answer-${index}`);
             const allQuestions = document.querySelectorAll('.faq-question');
             const allAnswers = document.querySelectorAll('.faq-answer');
             
             // Close all other FAQs
-            allQuestions.forEach((q, i) => {
+            questions.forEach((q, i) => {
                 if (i !== index) {
                     q.classList.remove('active');
                 }
             });
             
-            allAnswers.forEach((a, i) => {
+            const answers = document.querySelectorAll('.faq-answer');
+            answers.forEach((a, i) => {
                 if (i !== index) {
                     a.classList.remove('active');
                 }
             });
             
             // Toggle current FAQ
-            if (question && answer) {
-                question.classList.toggle('active');
+            question.classList.toggle('active');
+            answer.classList.toggle('active');
                 answer.classList.toggle('active');
             }
         }
