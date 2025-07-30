@@ -618,21 +618,6 @@
                 </div>
             </div>
 
-            <!-- Orders and Operations Page -->
-            <div id="orders-operations-page" class="page" style="display: none;">
-                <div class="container">
-                    <div class="faq-header">
-                        <div class="back-button" onclick="goBackToRegion()">← Back</div>
-                        <h2 class="faq-title" id="orders-title">Orders and Operations</h2>
-                        <p class="faq-subtitle" id="orders-subtitle">Select an operation type to access specific information</p>
-                    </div>
-                    
-                    <div class="tiles-grid" id="orders-tiles">
-                        <!-- Tiles will be populated by JavaScript -->
-                    </div>
-                </div>
-            </div>
-
             <!-- FAQ Page -->
             <div id="faq-page" class="page">
                 <div class="faq-header">
@@ -1085,6 +1070,64 @@
                 `;
                 document.getElementById('page-title').textContent = 'Canada - POS Hardware Deployment Services';
             }
+        }
+
+        function updateOrdersOperationsPage(region) {
+            const regionName = region === 'us' ? 'United States' : 'Canada';
+            const headerClass = region === 'canada' ? 'canada' : 'us';
+            
+            updateHeader(headerClass);
+            
+            const breadcrumb = [
+                {text: 'Home', link: true, onclick: "showPage('home')"},
+                {text: regionName, link: true, onclick: `showPage('region', '${region}')`},
+                {text: 'Orders and Operations', current: true}
+            ];
+            updateBreadcrumb(breadcrumb);
+            
+            // Render operation tiles
+            const container = document.getElementById('orders-tiles');
+            
+            const operations = [
+                {
+                    id: 'order-terminal',
+                    icon: '🖥️',
+                    title: 'Order a Terminal',
+                    description: 'Place new orders for POS terminals and hardware'
+                },
+                {
+                    id: 'replacement',
+                    icon: '🔄',
+                    title: 'Replacement',
+                    description: 'Request replacement for damaged or faulty equipment'
+                },
+                {
+                    id: 'recovery',
+                    icon: '🔧',
+                    title: 'Recovery',
+                    description: 'Equipment recovery and return procedures'
+                },
+                {
+                    id: 'edit-merchant',
+                    icon: '👤',
+                    title: 'Edit Merchant',
+                    description: 'Update merchant information and settings'
+                },
+                {
+                    id: 'edit-order',
+                    icon: '📝',
+                    title: 'Edit Order',
+                    description: 'Modify existing orders and specifications'
+                }
+            ];
+            
+            container.innerHTML = operations.map(op => `
+                <div class="tile" onclick="showPage('faq', '${region}', '${op.id}')">
+                    <div class="tile-icon">${op.icon}</div>
+                    <h3 class="tile-title">${op.title}</h3>
+                    <p class="tile-description">${op.description}</p>
+                </div>
+            `).join('');
         }
 
         function initializeFAQPage(region, category) {
