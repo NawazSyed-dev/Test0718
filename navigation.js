@@ -11,6 +11,10 @@ function navigateToOrdersOperations(region) {
     window.location.href = `orders-operations.html?region=${region}`;
 }
 
+function navigateToOrdersOperations(region) {
+    window.location.href = `orders-operations.html?region=${region}`;
+}
+
 function goBack() {
     const urlParams = new URLSearchParams(window.location.search);
     const region = urlParams.get('region');
