@@ -1250,9 +1250,11 @@
                 `;
             } else {
                 breadcrumb.innerHTML = `
-                    <a href="#" onclick="showPage('home')" class="breadcrumb-link">Home</a>
+                    <a href="index-combined.html" class="breadcrumb-link">Home</a>
                     <span class="breadcrumb-separator">></span>
-                    <a href="#" onclick="showPage('${region}')" class="breadcrumb-link">${regionName}</a>
+                    <a href="${region}-combined.html" class="breadcrumb-link">${regionName}</a>
+                    <span class="breadcrumb-separator">></span>
+                    <a href="#" onclick="goBackToOrdersOperations('${region}')" class="breadcrumb-link">Orders and Operations</a>
                     <span class="breadcrumb-separator">></span>
                     <span class="current">${categoryData.title}</span>
                 `;
@@ -1260,6 +1262,58 @@
             
             // Render FAQ content
             renderFAQContent(categoryData.faqs);
+        }
+
+        function goBackToOrdersOperations(region) {
+            // For orders operation categories, go back to orders operations page
+            const orderOperationCategories = ['order-terminal', 'replacement', 'recovery', 'edit-merchant', 'edit-order'];
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            
+            if (orderOperationCategories.includes(category)) {
+                // Simulate orders operations page by showing tiles
+                showOrdersOperationsPage(region);
+            }
+        }
+        
+        function showOrdersOperationsPage(region) {
+            const regionName = region === 'us' ? 'United States' : 'Canada';
+            
+            // Update breadcrumb for orders operations
+            const breadcrumb = document.getElementById('breadcrumb');
+            breadcrumb.innerHTML = `
+                <a href="index-combined.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">></span>
+                <a href="${region}-combined.html" class="breadcrumb-link">${regionName}</a>
+                <span class="breadcrumb-separator">></span>
+                <span class="current">Orders and Operations</span>
+            `;
+            
+            // Update title
+            document.getElementById('faq-title').textContent = 'Orders and Operations';
+            document.getElementById('faq-subtitle').textContent = 'Select an operation type to access specific information';
+            
+            // Show operation tiles instead of FAQ content
+            const operations = [
+                { id: 'order-terminal', icon: '🖥️', title: 'Order a Terminal', description: 'Place new orders for POS terminals and hardware' },
+                { id: 'replacement', icon: '🔄', title: 'Replacement', description: 'Request replacement for damaged or faulty equipment' },
+                { id: 'recovery', icon: '🔧', title: 'Recovery', description: 'Equipment recovery and return procedures' },
+                { id: 'edit-merchant', icon: '👤', title: 'Edit Merchant', description: 'Update merchant information and settings' },
+                { id: 'edit-order', icon: '📝', title: 'Edit Order', description: 'Modify existing orders and specifications' }
+            ];
+            
+            const container = document.getElementById('faq-content');
+            container.innerHTML = `
+                <div class="tiles-grid">
+                    ${operations.map(op => `
+                        <div class="tile" onclick="navigateToFAQ('${region}', '${op.id}')">
+                            <div class="tile-icon">${op.icon}</div>
+                            <h3 class="tile-title">${op.title}</h3>
+                            <p class="tile-description">${op.description}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
 
         function renderFAQContent(faqs) {
@@ -1309,7 +1363,6 @@
             // Check if there are URL parameters for direct navigation
             const urlParams = new URLSearchParams(window.location.search);
             const region = urlParams.get('region');
-            const category = urlParams.get('category');
             const category = urlParams.get('category');
             
             // Handle global contacts
