@@ -288,162 +288,6 @@ function getFAQData(region, category) {
                     }
                 ]
             },
-            'large-rollout': {
-                title: 'Large Rollout',
-                subtitle: 'Large scale deployment and rollout services for US operations',
-                faqs: [
-                    {
-                        question: 'What qualifies as a large rollout deployment?',
-                        answer: 'Large rollouts typically involve 50+ locations, multi-state deployments, or enterprise-wide implementations. These require specialized project management, dedicated resources, and custom deployment schedules.'
-                    },
-                    {
-                        question: 'How do I initiate a large rollout project?',
-                        answer: 'Contact your enterprise account manager or call 1-800-ENTERPRISE. We\'ll assign a dedicated project manager and create a custom deployment plan with timeline, resources, and milestone tracking.'
-                    },
-                    {
-                        question: 'What additional services are included in large rollouts?',
-                        answer: 'Large rollouts include: dedicated project management, custom staging and configuration, coordinated logistics, on-site training programs, 24/7 deployment support, and post-deployment optimization.'
-                    },
-                    {
-                        question: 'How are large rollout timelines managed?',
-                        answer: 'We create detailed project timelines with phased deployments, milestone checkpoints, and contingency planning. Regular status meetings and real-time project dashboards keep all stakeholders informed.'
-                    },
-                    {
-                        question: 'What support is available during large rollouts?',
-                        answer: 'Dedicated support includes: enterprise project manager, technical lead engineer, logistics coordinator, training specialist, and 24/7 escalation hotline. War room support available for critical deployment phases.'
-                    }
-                ]
-            },
-            'order-terminal': {
-                title: 'Order a Terminal',
-                subtitle: 'Place new orders for POS terminals and hardware',
-                faqs: [
-                    {
-                        question: 'How do I place a new terminal order?',
-                        answer: 'Orders can be placed through the enterprise portal, by calling 1-800-ORDER-POS, or through your dedicated account manager. Provide site details, terminal specifications, and preferred delivery timeline.'
-                    },
-                    {
-                        question: 'What information is required for terminal orders?',
-                        answer: 'Required information includes: merchant ID, site address, terminal model, configuration requirements, delivery contact, installation preferences, and any special requirements or accessories.'
-                    },
-                    {
-                        question: 'What are the available terminal models?',
-                        answer: 'Available models include: Terminal Pro X1 (full-service), Compact Station C2 (small business), Mobile Unit M3 (portable), Kitchen Display K4 (restaurant), and Custom Enterprise configurations.'
-                    },
-                    {
-                        question: 'How long does terminal delivery take?',
-                        answer: 'Standard delivery is 5-7 business days. Express delivery (2-3 days) and overnight options available. Custom configurations may require 10-14 days. Installation can be scheduled concurrent with delivery.'
-                    },
-                    {
-                        question: 'Can I track my terminal order?',
-                        answer: 'Yes, all orders are trackable through the customer portal using your order number. Real-time updates include order processing, shipping, and delivery status with SMS/email notifications.'
-                    }
-                ]
-            },
-            'replacement': {
-                title: 'Replacement',
-                subtitle: 'Request replacement for damaged or faulty equipment',
-                faqs: [
-                    {
-                        question: 'How do I request equipment replacement?',
-                        answer: 'Report equipment issues through the support portal, call 1-800-REPLACE, or contact your account manager. Provide serial number, issue description, and urgency level for fastest processing.'
-                    },
-                    {
-                        question: 'What is covered under replacement warranty?',
-                        answer: 'Warranty covers manufacturing defects, hardware failures, and normal wear issues. Coverage includes parts, labor, and shipping. Damage from misuse, accidents, or environmental factors may incur charges.'
-                    },
-                    {
-                        question: 'How quickly can I get a replacement?',
-                        answer: 'Critical replacements: 24-48 hours. Standard replacements: 3-5 business days. Advance replacement available for critical systems - new unit ships before defective unit return.'
-                    },
-                    {
-                        question: 'What happens to the defective equipment?',
-                        answer: 'Defective units must be returned within 10 business days using provided prepaid shipping labels. Failure to return may result in charges. Returned units are refurbished or recycled responsibly.'
-                    },
-                    {
-                        question: 'Is there a cost for replacement services?',
-                        answer: 'Warranty replacements are free including shipping and labor. Out-of-warranty replacements incur hardware costs plus service fees. Extended warranty plans available to minimize replacement costs.'
-                    }
-                ]
-            },
-            'recovery': {
-                title: 'Recovery',
-                subtitle: 'Equipment recovery and return procedures',
-                faqs: [
-                    {
-                        question: 'When is equipment recovery required?',
-                        answer: 'Recovery is required for: lease terminations, merchant closures, equipment upgrades, warranty replacements, and end-of-contract returns. Recovery ensures proper asset management and data security.'
-                    },
-                    {
-                        question: 'How do I schedule equipment recovery?',
-                        answer: 'Schedule recovery through the customer portal, call 1-800-RECOVERY, or contact your account manager. Provide equipment list, pickup address, and preferred scheduling window.'
-                    },
-                    {
-                        question: 'What preparation is needed for recovery?',
-                        answer: 'Preparation includes: data backup and wipe, equipment cleaning, cable organization, original packaging if available, and ensuring site access for pickup team.'
-                    },
-                    {
-                        question: 'Are there charges for equipment recovery?',
-                        answer: 'Standard recovery is included in service agreements. Rush recovery, special handling, or failed pickup attempts may incur additional charges. Detailed pricing available from your account manager.'
-                    },
-                    {
-                        question: 'What happens if equipment is not returned?',
-                        answer: 'Unreturned equipment may result in charges equal to replacement cost. Grace periods apply for legitimate delays. Contact customer service immediately if return issues arise.'
-                    }
-                ]
-            },
-            'edit-merchant': {
-                title: 'Edit Merchant',
-                subtitle: 'Update merchant information and settings',
-                faqs: [
-                    {
-                        question: 'How do I update merchant information?',
-                        answer: 'Merchant updates can be made through the merchant portal, by calling 1-800-MERCHANT, or through your account manager. Changes require verification and may need supporting documentation.'
-                    },
-                    {
-                        question: 'What merchant information can be updated?',
-                        answer: 'Updatable information includes: business name, address, contact details, banking information, processing settings, user access, and notification preferences. Some changes require approval processes.'
-                    },
-                    {
-                        question: 'How long do merchant updates take to process?',
-                        answer: 'Simple updates (contact info): Immediate. Address changes: 1-2 business days. Banking/processing changes: 3-5 business days for verification and approval. Critical updates can be expedited.'
-                    },
-                    {
-                        question: 'What documentation is required for updates?',
-                        answer: 'Required documentation varies by change type: business license for name changes, utility bills for address changes, bank statements for banking updates, and authorization forms for processing changes.'
-                    },
-                    {
-                        question: 'Can I make bulk merchant updates?',
-                        answer: 'Yes, bulk updates available for enterprise accounts with multiple locations. Use the bulk update portal or contact your account manager for assistance with large-scale merchant information changes.'
-                    }
-                ]
-            },
-            'edit-order': {
-                title: 'Edit Order',
-                subtitle: 'Modify existing orders and specifications',
-                faqs: [
-                    {
-                        question: 'Can I modify an existing order?',
-                        answer: 'Orders can be modified up to 24 hours before shipping. Contact customer service at 1-800-EDIT-ORDER or use the online portal. Some modifications may affect pricing and delivery timeline.'
-                    },
-                    {
-                        question: 'What order details can be changed?',
-                        answer: 'Modifiable details include: delivery address, contact information, installation preferences, accessory additions, and delivery timing. Hardware model changes may require order cancellation and resubmission.'
-                    },
-                    {
-                        question: 'Are there fees for order modifications?',
-                        answer: 'Simple modifications (address, contact) are free. Hardware changes, expedited shipping, or custom configuration changes may incur additional fees. Fee schedule available from customer service.'
-                    },
-                    {
-                        question: 'How do I cancel an order?',
-                        answer: 'Orders can be cancelled up to 24 hours before shipping without penalty. Contact customer service immediately. Custom orders or orders in production may incur cancellation fees.'
-                    },
-                    {
-                        question: 'What if I need to change an order after shipping?',
-                        answer: 'After shipping, contact customer service immediately. Options include: delivery redirection (if possible), return and reorder, or field modification upon delivery. Additional charges may apply.'
-                    }
-                ]
-            },
             contacts: {
                 title: 'Contacts',
                 subtitle: 'Contact information and support channels for US operations',
@@ -599,6 +443,162 @@ function getFAQData(region, category) {
                     {
                         question: 'How do I report issues with Canadian deliveries?',
                         answer: 'Report delivery issues within 24 hours through Canadian claims portal or call 1-800-CLAIMS-CA. Bilingual claims processing available. Photos required for damage claims.'
+                    }
+                ]
+            },
+            'large-rollout': {
+                title: 'Large Rollout',
+                subtitle: 'Large scale deployment and rollout services for Canadian operations',
+                faqs: [
+                    {
+                        question: 'What qualifies as a large rollout deployment in Canada?',
+                        answer: 'Large rollouts typically involve 50+ locations, multi-provincial deployments, or enterprise-wide implementations. These require specialized project management, bilingual support, and compliance with provincial regulations.'
+                    },
+                    {
+                        question: 'How do I initiate a large rollout project in Canada?',
+                        answer: 'Contact your enterprise account manager or call 1-800-ENTERPRISE-CA. We\'ll assign a bilingual project manager and create a custom deployment plan considering provincial requirements and regulations.'
+                    },
+                    {
+                        question: 'What additional services are included in Canadian large rollouts?',
+                        answer: 'Canadian large rollouts include: bilingual project management, CSA compliance verification, provincial regulatory compliance, coordinated customs clearance, bilingual training programs, and 24/7 deployment support.'
+                    },
+                    {
+                        question: 'How are large rollout timelines managed across provinces?',
+                        answer: 'We create detailed project timelines accounting for provincial differences, customs processing, and regulatory requirements. Bilingual project dashboards and regular status meetings keep all stakeholders informed.'
+                    },
+                    {
+                        question: 'What support is available during Canadian large rollouts?',
+                        answer: 'Dedicated bilingual support includes: enterprise project manager, technical lead engineer, customs coordinator, bilingual training specialist, and 24/7 escalation hotline with French support available.'
+                    }
+                ]
+            },
+            'order-terminal': {
+                title: 'Order a Terminal',
+                subtitle: 'Place new orders for POS terminals and hardware in Canada',
+                faqs: [
+                    {
+                        question: 'How do I place a new terminal order in Canada?',
+                        answer: 'Orders can be placed through the Canadian enterprise portal, by calling 1-800-ORDER-CA, or through your dedicated account manager. Include GST/HST information and provincial requirements.'
+                    },
+                    {
+                        question: 'What information is required for Canadian terminal orders?',
+                        answer: 'Required information includes: merchant ID, site address, terminal model, GST/HST numbers, provincial business registration, delivery contact, installation preferences, and language requirements.'
+                    },
+                    {
+                        question: 'What terminal models are available in Canada?',
+                        answer: 'Available CSA-certified models include: Terminal Pro X1-CA, Compact Station C2-CA, Mobile Unit M3-CA, Kitchen Display K4-CA, and Custom Enterprise configurations with bilingual support.'
+                    },
+                    {
+                        question: 'How long does terminal delivery take in Canada?',
+                        answer: 'Standard delivery is 7-10 business days including customs clearance. Express delivery (3-5 days) available to major cities. Quebec orders may require additional 2-3 days for French documentation.'
+                    },
+                    {
+                        question: 'Can I track my Canadian terminal order?',
+                        answer: 'Yes, orders are trackable through the Canadian customer portal. Real-time updates include customs clearance, provincial processing, and delivery status with bilingual SMS/email notifications.'
+                    }
+                ]
+            },
+            'replacement': {
+                title: 'Replacement',
+                subtitle: 'Request replacement for damaged or faulty equipment in Canada',
+                faqs: [
+                    {
+                        question: 'How do I request equipment replacement in Canada?',
+                        answer: 'Report equipment issues through the Canadian support portal, call 1-800-REPLACE-CA, or contact your account manager. Bilingual support available 24/7 for critical issues.'
+                    },
+                    {
+                        question: 'What is covered under Canadian replacement warranty?',
+                        answer: 'Warranty covers manufacturing defects, hardware failures, and normal wear issues. Coverage complies with provincial consumer protection laws and includes parts, labor, and shipping across Canada.'
+                    },
+                    {
+                        question: 'How quickly can I get a replacement in Canada?',
+                        answer: 'Critical replacements: 24-48 hours in major cities, 48-72 hours in remote areas. Standard replacements: 3-5 business days. Advance replacement available for critical systems.'
+                    },
+                    {
+                        question: 'What happens to defective equipment in Canada?',
+                        answer: 'Defective units must be returned within 10 business days using provided prepaid shipping labels. Returns processed through Canadian facilities with proper customs documentation.'
+                    },
+                    {
+                        question: 'Are there costs for replacement services in Canada?',
+                        answer: 'Warranty replacements are free including shipping and labor. Out-of-warranty replacements incur hardware costs plus service fees. All pricing includes applicable provincial taxes.'
+                    }
+                ]
+            },
+            'recovery': {
+                title: 'Recovery',
+                subtitle: 'Equipment recovery and return procedures in Canada',
+                faqs: [
+                    {
+                        question: 'When is equipment recovery required in Canada?',
+                        answer: 'Recovery is required for: lease terminations, merchant closures, equipment upgrades, warranty replacements, and end-of-contract returns. Ensures compliance with Canadian data protection laws.'
+                    },
+                    {
+                        question: 'How do I schedule equipment recovery in Canada?',
+                        answer: 'Schedule recovery through the Canadian customer portal, call 1-800-RECOVERY-CA, or contact your account manager. Bilingual scheduling support available across all provinces.'
+                    },
+                    {
+                        question: 'What preparation is needed for Canadian recovery?',
+                        answer: 'Preparation includes: data backup and secure wipe per Canadian privacy laws, equipment cleaning, cable organization, original packaging if available, and ensuring site access for pickup team.'
+                    },
+                    {
+                        question: 'Are there charges for equipment recovery in Canada?',
+                        answer: 'Standard recovery is included in service agreements. Rush recovery, remote location pickup, or failed pickup attempts may incur additional charges. All pricing includes applicable taxes.'
+                    },
+                    {
+                        question: 'What happens if equipment is not returned in Canada?',
+                        answer: 'Unreturned equipment may result in charges equal to replacement cost plus applicable taxes. Grace periods apply for legitimate delays. Provincial consumer protection laws apply.'
+                    }
+                ]
+            },
+            'edit-merchant': {
+                title: 'Edit Merchant',
+                subtitle: 'Update merchant information and settings in Canada',
+                faqs: [
+                    {
+                        question: 'How do I update merchant information in Canada?',
+                        answer: 'Merchant updates can be made through the Canadian merchant portal, by calling 1-800-MERCHANT-CA, or through your account manager. Bilingual support available for all updates.'
+                    },
+                    {
+                        question: 'What Canadian merchant information can be updated?',
+                        answer: 'Updatable information includes: business name, address, contact details, banking information, GST/HST numbers, processing settings, user access, and language preferences.'
+                    },
+                    {
+                        question: 'How long do Canadian merchant updates take to process?',
+                        answer: 'Simple updates: Immediate. Address changes: 1-2 business days. Banking/tax number changes: 3-5 business days for CRA verification. Quebec updates may require additional French documentation.'
+                    },
+                    {
+                        question: 'What documentation is required for Canadian updates?',
+                        answer: 'Required documentation includes: business registration, GST/HST certificates, bank statements, provincial licenses, and for Quebec - French language compliance documentation where applicable.'
+                    },
+                    {
+                        question: 'Can I make bulk merchant updates in Canada?',
+                        answer: 'Yes, bulk updates available for enterprise accounts with multiple Canadian locations. Bilingual bulk update portal available or contact your account manager for assistance.'
+                    }
+                ]
+            },
+            'edit-order': {
+                title: 'Edit Order',
+                subtitle: 'Modify existing orders and specifications in Canada',
+                faqs: [
+                    {
+                        question: 'Can I modify an existing order in Canada?',
+                        answer: 'Orders can be modified up to 24 hours before shipping. Contact Canadian customer service at 1-800-EDIT-CA or use the online portal. Bilingual support available for all modifications.'
+                    },
+                    {
+                        question: 'What Canadian order details can be changed?',
+                        answer: 'Modifiable details include: delivery address, contact information, installation preferences, accessory additions, delivery timing, and language requirements for documentation and training.'
+                    },
+                    {
+                        question: 'Are there fees for order modifications in Canada?',
+                        answer: 'Simple modifications (address, contact) are free. Hardware changes, expedited shipping, or custom configuration changes may incur additional fees plus applicable provincial taxes.'
+                    },
+                    {
+                        question: 'How do I cancel an order in Canada?',
+                        answer: 'Orders can be cancelled up to 24 hours before shipping without penalty. Contact Canadian customer service immediately. Custom orders may incur cancellation fees per provincial regulations.'
+                    },
+                    {
+                        question: 'What if I need to change a Canadian order after shipping?',
+                        answer: 'After shipping, contact Canadian customer service immediately. Options include: delivery redirection, customs redirection (if possible), return and reorder, or field modification upon delivery.'
                     }
                 ]
             },
