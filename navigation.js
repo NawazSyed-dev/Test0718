@@ -11,10 +11,6 @@ function navigateToOrdersOperations(region) {
     window.location.href = `orders-operations.html?region=${region}`;
 }
 
-function navigateToOrdersOperations(region) {
-    window.location.href = `orders-operations.html?region=${region}`;
-}
-
 function goBack() {
     const urlParams = new URLSearchParams(window.location.search);
     const region = urlParams.get('region');
@@ -23,7 +19,11 @@ function goBack() {
     // Handle global contacts
     if (region === 'global' && category === 'contacts') {
         window.location.href = 'index.html';
+    } else if (['order-terminal', 'replacement', 'recovery', 'edit-merchant', 'edit-order'].includes(category)) {
+        // For operation categories, go back to Orders and Operations page
+        window.location.href = `orders-operations.html?region=${region}`;
     } else if (region) {
+        // For other categories, go back to region page
         window.location.href = `${region}.html`;
     } else {
         window.location.href = 'index.html';
@@ -70,13 +70,23 @@ function initializeFAQPage() {
             <span class="breadcrumb-separator">></span>
             <span class="current">Contacts</span>
         `;
-    } else {
+    } else if (['order-terminal', 'replacement', 'recovery', 'edit-merchant', 'edit-order'].includes(category)) {
+        // For operation categories, show Orders and Operations in breadcrumb
         breadcrumb.innerHTML = `
             <a href="index.html" class="breadcrumb-link">Home</a>
             <span class="breadcrumb-separator">></span>
             <a href="${region}.html" class="breadcrumb-link">${regionName}</a>
             <span class="breadcrumb-separator">></span>
             <a href="orders-operations.html?region=${region}" class="breadcrumb-link">Orders and Operations</a>
+            <span class="breadcrumb-separator">></span>
+            <span class="current">${categoryData.title}</span>
+        `;
+    } else {
+        // For other categories, show direct path
+        breadcrumb.innerHTML = `
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="${region}.html" class="breadcrumb-link">${regionName}</a>
             <span class="breadcrumb-separator">></span>
             <span class="current">${categoryData.title}</span>
         `;

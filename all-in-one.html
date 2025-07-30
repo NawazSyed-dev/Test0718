@@ -1161,6 +1161,12 @@
         function navigateToFAQ(region, category) {
             currentPage = 'faq';
             currentRegion = region;
+
+        function showOrdersOperations(region) {
+            // This would show the orders operations page in the all-in-one version
+            // For now, redirect to the region page
+            window.location.href = `${region}-combined.html`;
+        }
             currentCategory = category;
             showPage('faq-page');
             updateHeader(region);
@@ -1364,8 +1370,16 @@
             const urlParams = new URLSearchParams(window.location.search);
             const region = urlParams.get('region');
             const category = urlParams.get('category');
+            const category = urlParams.get('category');
             
             // Handle global contacts
+            if (region === 'global' && category === 'contacts') {
+                window.location.href = 'index-combined.html';
+            } else if (['order-terminal', 'replacement', 'recovery', 'edit-merchant', 'edit-order'].includes(category)) {
+                // For operation categories, show Orders and Operations page
+                showOrdersOperations(region);
+            } else if (region) {
+                // For other categories, go back to region page
             if (region === 'global' && category === 'contacts') {
                 showPage('home');
             } else if (region) {

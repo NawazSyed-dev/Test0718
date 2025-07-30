@@ -215,22 +215,23 @@ body {
 
 /* Contacts Section */
 .contacts-section {
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .contacts-card {
     background: white;
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 150px;
     text-align: center;
 }
 
@@ -257,32 +258,23 @@ body {
 }
 
 .contacts-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .contacts-title {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #323130;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .contacts-description {
-    color: #605e5c;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    display: none;
 }
 
 .contacts-arrow {
-    font-size: 1.5rem;
-    color: #28a745;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-.contacts-card:hover .contacts-arrow {
-    transform: translateX(8px);
+    display: none;
 }
 
 /* Region Page Styles */
