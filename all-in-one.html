@@ -1018,8 +1018,16 @@
         }
 
         function goBack() {
-            if (currentRegion) {
+            } else if (currentPage === 'orders-operations') {
+                showPage('region', currentRegion);
+            if (currentPage === 'faq' && currentRegion === 'global') {
+                showPage('home');
+            } else if (currentPage === 'faq') {
                 navigateToRegion(currentRegion);
+        
+        function goBackToRegion() {
+            showPage('region', currentRegion);
+        }
             } else {
                 navigateToLanding();
             }
@@ -1070,64 +1078,6 @@
                 `;
                 document.getElementById('page-title').textContent = 'Canada - POS Hardware Deployment Services';
             }
-        }
-
-        function updateOrdersOperationsPage(region) {
-            const regionName = region === 'us' ? 'United States' : 'Canada';
-            const headerClass = region === 'canada' ? 'canada' : 'us';
-            
-            updateHeader(headerClass);
-            
-            const breadcrumb = [
-                {text: 'Home', link: true, onclick: "showPage('home')"},
-                {text: regionName, link: true, onclick: `showPage('region', '${region}')`},
-                {text: 'Orders and Operations', current: true}
-            ];
-            updateBreadcrumb(breadcrumb);
-            
-            // Render operation tiles
-            const container = document.getElementById('orders-tiles');
-            
-            const operations = [
-                {
-                    id: 'order-terminal',
-                    icon: '🖥️',
-                    title: 'Order a Terminal',
-                    description: 'Place new orders for POS terminals and hardware'
-                },
-                {
-                    id: 'replacement',
-                    icon: '🔄',
-                    title: 'Replacement',
-                    description: 'Request replacement for damaged or faulty equipment'
-                },
-                {
-                    id: 'recovery',
-                    icon: '🔧',
-                    title: 'Recovery',
-                    description: 'Equipment recovery and return procedures'
-                },
-                {
-                    id: 'edit-merchant',
-                    icon: '👤',
-                    title: 'Edit Merchant',
-                    description: 'Update merchant information and settings'
-                },
-                {
-                    id: 'edit-order',
-                    icon: '📝',
-                    title: 'Edit Order',
-                    description: 'Modify existing orders and specifications'
-                }
-            ];
-            
-            container.innerHTML = operations.map(op => `
-                <div class="tile" onclick="showPage('faq', '${region}', '${op.id}')">
-                    <div class="tile-icon">${op.icon}</div>
-                    <h3 class="tile-title">${op.title}</h3>
-                    <p class="tile-description">${op.description}</p>
-                </div>
-            `).join('');
         }
 
         function initializeFAQPage(region, category) {
