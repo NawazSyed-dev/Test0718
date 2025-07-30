@@ -520,13 +520,6 @@
                             <p class="region-description">Access Canada-specific POS deployment resources, documentation, and support services.</p>
                             <div class="card-arrow">→</div>
                         </div>
-                        
-                        <div class="region-card contacts" onclick="showPage('faq', 'global', 'contacts')">
-                            <div class="region-icon">📞</div>
-                            <h3 class="region-title">Contacts</h3>
-                            <p class="region-description">Contact information and support channels for all regions.</p>
-                            <div class="card-arrow">→</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -621,6 +614,21 @@
                         <div class="tile-icon">📞</div>
                         <h3 class="tile-title">Contacts</h3>
                         <p class="tile-description">Contact information and support channels</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders and Operations Page -->
+            <div id="orders-operations-page" class="page" style="display: none;">
+                <div class="container">
+                    <div class="faq-header">
+                        <div class="back-button" onclick="goBackToRegion()">← Back</div>
+                        <h2 class="faq-title" id="orders-title">Orders and Operations</h2>
+                        <p class="faq-subtitle" id="orders-subtitle">Select an operation type to access specific information</p>
+                    </div>
+                    
+                    <div class="tiles-grid" id="orders-tiles">
+                        <!-- Tiles will be populated by JavaScript -->
                     </div>
                 </div>
             </div>
