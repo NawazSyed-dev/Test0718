@@ -172,6 +172,18 @@ body {
     border-color: #dc3545;
 }
 
+.region-card.contacts::before {
+    background: linear-gradient(90deg, #28a745, #20c997);
+}
+
+.region-card.contacts:hover {
+    border-color: #28a745;
+}
+
+.region-card.contacts .card-arrow {
+    color: #28a745;
+}
+
 .region-icon {
     font-size: 3rem;
     margin-bottom: 1rem;

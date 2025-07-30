@@ -965,6 +965,40 @@
             }
         };
 
+        // Handle global contacts
+        if (region === 'global' && category === 'contacts') {
+            return {
+                title: 'Global Contacts',
+                subtitle: 'Contact information and support channels for all regions',
+                faqs: [
+                    {
+                        question: 'What are the main contact numbers for each region?',
+                        answer: 'United States: 1-800-POS-MAIN | Canada: 1-800-POS-CANADA | Global Enterprise: 1-800-ENTERPRISE | Emergency Support: Available 24/7 for both regions with appropriate regional routing.'
+                    },
+                    {
+                        question: 'How do I reach technical support?',
+                        answer: 'US Technical Support: 1-800-POS-HELP | Canadian Technical Support: 1-800-SUPPORT-CA | Email: support@posdeployment.com (US), support-ca@posdeployment.com (Canada) | Live Chat: Available through respective regional portals.'
+                    },
+                    {
+                        question: 'What are the regional office locations?',
+                        answer: 'US Offices: New York, Chicago, Dallas, Denver, Los Angeles | Canadian Offices: Toronto, Montreal, Vancouver, Calgary, Winnipeg | Each office provides local support in appropriate languages.'
+                    },
+                    {
+                        question: 'How do I contact enterprise sales?',
+                        answer: 'Enterprise Sales: 1-800-ENTERPRISE (Global) | US Sales: 1-800-POS-SALES | Canadian Sales: 1-800-SALES-CA | Email: enterprise@posdeployment.com | Dedicated enterprise account managers available.'
+                    },
+                    {
+                        question: 'What emergency support is available?',
+                        answer: 'Emergency Hotlines: US: 1-800-EMERGENCY | Canada: 1-800-EMERGENCY-CA | Available 24/7/365 | Bilingual support for Canadian customers | Escalation to regional operations centers within 15 minutes.'
+                    },
+                    {
+                        question: 'How do I provide feedback or suggestions?',
+                        answer: 'Feedback Channels: US: feedback@posdeployment.com | Canada: feedback-ca@posdeployment.com | Customer portals for both regions | Quarterly satisfaction surveys | Monthly product development review meetings.'
+                    }
+                ]
+            };
+        }
+        
         // Navigation functions
         function navigateToRegion(region) {
             currentPage = region;

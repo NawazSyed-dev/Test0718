@@ -7,6 +7,10 @@ function navigateToFAQ(region, category) {
     window.location.href = `faq.html?region=${region}&category=${category}`;
 }
 
+function navigateToOrdersOperations(region) {
+    window.location.href = `orders-operations.html?region=${region}`;
+}
+
 function goBack() {
     const urlParams = new URLSearchParams(window.location.search);
     const region = urlParams.get('region');
