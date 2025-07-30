@@ -76,6 +76,8 @@ function initializeFAQPage() {
             <span class="breadcrumb-separator">></span>
             <a href="${region}.html" class="breadcrumb-link">${regionName}</a>
             <span class="breadcrumb-separator">></span>
+            <a href="orders-operations.html?region=${region}" class="breadcrumb-link">Orders and Operations</a>
+            <span class="breadcrumb-separator">></span>
             <span class="current">${categoryData.title}</span>
         `;
     }

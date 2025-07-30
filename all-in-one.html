@@ -214,6 +214,78 @@
             transform: translateX(8px);
         }
 
+        /* Contacts Section */
+        .contacts-section {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contacts-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .contacts-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #28a745, #20c997);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .contacts-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .contacts-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border-color: #28a745;
+        }
+
+        .contacts-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contacts-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 1rem;
+        }
+
+        .contacts-description {
+            color: #605e5c;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .contacts-arrow {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .contacts-card:hover .contacts-arrow {
+            transform: translateX(8px);
+        }
+
         /* Region Page Styles */
         .region-header {
             text-align: center;
@@ -283,6 +355,15 @@
             transform: translateY(-4px);
             box-shadow: 0 6px 24px rgba(0,0,0,0.12);
             border-color: #0078d4;
+        }
+
+        /* Canada-specific tile hover effects */
+        .header.canada ~ .main-content .tile:hover {
+            border-color: #dc3545;
+        }
+
+        .header.canada ~ .main-content .tile::before {
+            background: linear-gradient(90deg, #dc3545, #c82333);
         }
 
         .tile.canada:hover {
@@ -646,6 +727,16 @@
                         <div class="tile-icon">📞</div>
                         <h3 class="tile-title">Contacts</h3>
                         <p class="tile-description">Contact information and support channels</p>
+                    </div>
+                </div>
+                
+                <!-- Contacts Section -->
+                <div class="contacts-section">
+                    <div class="contacts-card" onclick="navigateToFAQ('global', 'contacts')">
+                        <div class="contacts-icon">📞</div>
+                        <h3 class="contacts-title">Global Contacts</h3>
+                        <p class="contacts-description">Access contact information and support channels for all regions</p>
+                        <div class="contacts-arrow">→</div>
                     </div>
                 </div>
             </div>

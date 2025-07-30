@@ -213,6 +213,78 @@ body {
     transform: translateX(8px);
 }
 
+/* Contacts Section */
+.contacts-section {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    text-align: center;
+}
+
+.contacts-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #28a745, #20c997);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contacts-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contacts-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    border-color: #28a745;
+}
+
+.contacts-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contacts-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #323130;
+    margin-bottom: 1rem;
+}
+
+.contacts-description {
+    color: #605e5c;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contacts-arrow {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.contacts-card:hover .contacts-arrow {
+    transform: translateX(8px);
+}
+
 /* Region Page Styles */
 .region-header {
     text-align: center;
@@ -278,6 +350,15 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 6px 24px rgba(0,0,0,0.12);
     border-color: #0078d4;
+}
+
+/* Canada-specific tile hover effects */
+.header.canada ~ .main-content .tile:hover {
+    border-color: #dc3545;
+}
+
+.header.canada ~ .main-content .tile::before {
+    background: linear-gradient(90deg, #dc3545, #c82333);
 }
 
 .tile-icon {
@@ -399,38 +480,6 @@ body {
 
 .faq-answer p:last-child {
     margin-bottom: 0;
-}
-
-/* Floating Contact Button */
-.floating-contact-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, #28a745, #20c997);
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(40, 167, 69, 0.3);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    z-index: 1000;
-}
-
-.floating-contact-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(40, 167, 69, 0.4);
-}
-
-.contact-icon {
-    font-size: 1.2rem;
-}
-
-.contact-text {
-    font-size: 0.9rem;
 }
 
 /* Footer */
